@@ -24,3 +24,4 @@ def add(a,b=20 , c=10):
 # keyword arguments
 result = add(14,c=2, b=10) #a = 14 ,c = 10 ,c =2
 print(f"result is {result}") #result is 26
+
