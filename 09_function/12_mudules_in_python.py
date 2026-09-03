@@ -5,6 +5,7 @@
 #how to import a module in python
 #syntax:import module_name
 #syntax:for importing only few functions/variables: from module_name import func1,func2,func3
+#syntax:  to create an alias  for the module that is imported: import module_name as alias_name
 
 import math
 #calculating square root of number
