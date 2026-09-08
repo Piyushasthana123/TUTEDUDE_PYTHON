@@ -1,2 +1,8 @@
 this file is overwritten by using w mode
 this file is overwritten by using w mode
+this is the new text of the file which is appended.
+this is the new text of the file which is appended.
+good day all!
+this is the new text of the file which is appended.
+this is the new text of the file which is appended.
+good day all!
