@@ -1,5 +1,5 @@
 #creating the file in text  - xt or tx
-f = open('file1.text','xt')
+f = open('file1.txt', 'xt')
 
 #write into the file
 #write(content)
