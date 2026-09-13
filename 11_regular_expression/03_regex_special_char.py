@@ -47,4 +47,4 @@ print(match_obj) #<re.Match object; span=(3, 7), match='ther'>
 #\W => opposite of \w. matches a character except - [a-z][A-Z][0-9].
 pat = r"[a-z][a-z][a-z]\W"
 match_obj = re.search(pat,s2)
-print(match_obj) #<re.Match object; span=(5, 9), match='ere '>
+print(match_obj) #<re.Match object; span=(5, 9), match='ere '> 
