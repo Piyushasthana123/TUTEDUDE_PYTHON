@@ -17,12 +17,12 @@ class PhoneBook:
     @classmethod
     def search_contact(cls,name):
         for data in cls.Phone_directory:
-            if data.name == name:
+            if data.name.lower()== name.lower():
                 return f"this is the {data.name} and phone no: {data.phone}"
-        return f"{data.name} is not found in present directory"
+        return f"{name} is not found in present directory"
 
     @staticmethod
-    def valid_Phone_directory(number):
+    def validate_Phone_number(number):
         if len(number) >= 8 and number.isdigit():
             return True
         else:
@@ -31,8 +31,10 @@ n_contact = int(input("how many contact do you want add?: "))
 for n in range(n_contact):
     name = input("Enter your name: ")
     phone_number = input("Enter your phone number: ")
-    if PhoneBook.validate_,phone_number(phone_number):
+    if PhoneBook.validate_Phone_number(phone_number):
         PhoneBook(name,phone_number)
+    else:
+        print("invalid phone number")
 
 
 # c1 = PhoneBook('c1',"52349835748490")
