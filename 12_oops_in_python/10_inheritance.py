@@ -18,7 +18,7 @@ class Car(Vehicle):
         self.car_type = car_type
         self.drive_type = drive_type
         # Vehicle.__init__(self,4,7,15)
-        super().__init__(4,7,15,40)
+        super().__init__(4, 7, 15)
 
 # the car class inherits the vehicle class
 #car class is also called derived / child class
