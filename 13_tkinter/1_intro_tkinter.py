@@ -104,4 +104,31 @@ text_btn.pack()
 # button = ttk.Button(text = "Enable text box", command = enable_text)
 # button.pack()
 
+#check button
+check_option = tk.StringVar()
+def check_option_task():
+    print(check_option.get(),type(check_option.get()))
+
+check_button = ttk.Checkbutton(text = "Agree with the term and condition", variable = check_option ,
+                               command = check_option_task,onvalue = "yes" , offvalue = "no")
+check_button.pack()
+
+# redio button
+def get_radio_value():
+    print(radio_value.get())
+
+radio_value = tk.StringVar()
+option_1 = ttk.Radiobutton(text = "mango" , variable = radio_value, value = "mango", command = get_radio_value )
+option_2 = ttk.Radiobutton(text = "orange", variable = radio_value, value = "orange", command = get_radio_value)
+option_3 = ttk.Radiobutton(text = "Apple",  variable = radio_value, value = "Apple" ,command = get_radio_value)
+option_1.pack()
+option_2.pack()
+option_3.pack()
+
+#combox
+selected_country = tk.StringVar()
+countries = ttk.Combobox(textvariable = selected_country , values = ("india","canada","Austria","Australia"))
+countries["state"] = "readonly"
+countries.pack()
+
 window.mainloop()
