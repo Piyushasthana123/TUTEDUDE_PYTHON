@@ -131,4 +131,36 @@ countries = ttk.Combobox(textvariable = selected_country , values = ("india","ca
 countries["state"] = "readonly"
 countries.pack()
 
+def display_country(event):
+    msg = f"selceted_country is {selected_country.get()}"
+    country_label = ttk.Label(text=msg)
+    country_label.pack()
+    # print(f"selected_country is {selected_country.get()}")
+
+countries.bind("<<ComboboxSelected>>", display_country)
+
+#Listbox
+food_item = ("piza","garlic bread","burgar","nachos","salad")
+fav_food = tk.StringVar(value=food_item)
+food_list=tk.Listbox(listvariable = fav_food,height=5,selectmode="extended")
+food_list.pack()
+
+def get_fav_food(event):
+    # print(fav_food.get())
+    food_indices = food_list.curselection()
+    for i in food_indices:
+        print(food_list.get(i))
+
+food_list.bind("<<ListboxSelect>>", get_fav_food)
+
+#spinbox
+def get_spin_value():
+    print(f"carrent spin value: {spin_box.get()}")
+counter = tk.IntVar(value = 10)
+# spin_box = ttk.Spinbox(from_=0, to=20, textvariable = counter, wrap = True ,command = get_spin_value )
+# spin_box = ttk.Spinbox(value = (10,15,20,25,30), textvariable = counter, wrap = True ,command = get_spin_value )
+spin_box = ttk.Spinbox(value = tuple(range(5,105,5)), textvariable = counter, wrap = True ,command = get_spin_value )
+spin_box.pack()
+print(f"Initial value: {spin_box.get()}")
+
 window.mainloop()
